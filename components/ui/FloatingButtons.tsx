@@ -23,7 +23,7 @@ export default function FloatingButtons() {
     <div className="fixed right-6 bottom-6 z-50 flex flex-col items-center gap-3">
       {/* Messenger */}
       <a
-        href="https://m.me/yourpage"
+        href=""
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"

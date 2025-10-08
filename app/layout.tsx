@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="vi" className={inter.variable}>
       <body className="bg-gray-50 text-gray-900">
         <Header />
-        <main className="container mx-auto pt-25">{children}</main>
+        <main className="container mx-auto pt-24">{children}</main>
         <FloatingButtons />
         <Footer />
       </body>

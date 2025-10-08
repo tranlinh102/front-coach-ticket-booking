@@ -131,7 +131,7 @@ export default function BookingHero() {
       setCopiedCode(code);
       setTimeout(() => setCopiedCode(null), 2000);
     } catch (err) {
-      // ignore for now
+      console.error("Failed to copy code:", err);
     }
   };
 
