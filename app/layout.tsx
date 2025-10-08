@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer";
+import FloatingButtons from "@/components/ui/FloatingButtons";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +31,8 @@ export default function RootLayout({
     <html lang="vi" className={inter.variable}>
       <body className="bg-gray-50 text-gray-900">
         <Header />
-        <main className="container mx-auto">{children}</main>
+        <main className="container mx-auto pt-25">{children}</main>
+        <FloatingButtons />
         <Footer />
       </body>
     </html>

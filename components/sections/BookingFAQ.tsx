@@ -78,7 +78,7 @@ export default function BookingFAQ() {
             </button>
 
             {openIndex === index && (
-              <div className="px-6 pb-4 text-gray-600 border-t">
+              <div className="px-6 p-4 text-gray-600 border-t">
                 {faq.answer}
               </div>
             )}

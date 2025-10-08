@@ -7,8 +7,7 @@ export default function BookingPromo() {
           ĐẶT VÉ XE KHÁCH RẺ NHẤT!
         </h2>
         <p className="text-gray-600 max-w-lg">
-          redBus là nền tảng đặt vé xe khách trực tuyến lớn nhất thế giới, được hàng triệu khách hàng tin dùng trên toàn cầu.
-          <a href="#" className="text-black font-semibold ml-1 underline">...Đọc thêm</a>
+          LongBuses là nền tảng đặt vé xe khách trực tuyến lớn nhất Việt Nam, được hàng triệu khách hàng tin dùng.
         </p>
 
         <ul className="space-y-4">

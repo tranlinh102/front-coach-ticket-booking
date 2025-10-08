@@ -52,7 +52,7 @@ export default function NavBar() {
         </button>
 
         {accountOpen && (
-          <div className="absolute right-0 mt-2 bg-white shadow-md rounded-lg py-2 w-40 text-sm text-gray-700">
+          <div className="absolute right-0 bg-white shadow-md rounded-lg py-2 w-40 text-sm text-gray-700 z-50">
             <a href="#" className="block px-4 py-2 hover:bg-gray-100">
               Đăng nhập / Đăng ký
             </a>
