@@ -292,7 +292,7 @@ export default function BookingHero() {
         </div>
       </section>
 
-      <section className="relative z-20 -mt-20 max-w-7xl mx-auto px-6">
+      <section className="relative -mt-20 max-w-7xl mx-auto px-6">
           <div className="bg-white rounded-2xl shadow-xl p-4">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-bold text-gray-900 uppercase">Ưu đãi đang hot</h2>
