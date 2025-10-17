@@ -1,4 +1,4 @@
-import { RosetteCheckIcon, GooglePlayIcon, AppStoreIcon } from "../ui/Icon";
+import { RosetteCheckIcon, GooglePlayIcon, AppStoreIcon } from "../../ui/Icon";
 
 export default function DownloadSection() {
   return (

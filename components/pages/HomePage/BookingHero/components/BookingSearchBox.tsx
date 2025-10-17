@@ -4,7 +4,8 @@ import DatePicker from "react-datepicker";
 import { vi } from "date-fns/locale";
 import { useEffect, useRef, useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
-import { FromIcon, SwapIcon, DestIcon, CalendarIcon } from "./Icon";
+
+import { FromIcon, SwapIcon, DestIcon, CalendarIcon } from "@/components/ui/Icon";
 
 
 export default function BookingSearchBox() {

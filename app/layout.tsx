@@ -4,8 +4,8 @@ import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
 
-import Header from "@/components/common/Header/Header";
-import Footer from "@/components/common/Footer";
+import Header from "@/components/ui/Header/Header";
+import Footer from "@/components/ui/Footer";
 import FloatingButtons from "@/components/ui/FloatingButtons";
 
 const inter = Inter({

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CheckIcon, CopyIcon } from "./Icon";
+
+import { CheckIcon, CopyIcon } from "@/components/ui/Icon";
 
 type PromoCardProps = {
     gradient?: string,

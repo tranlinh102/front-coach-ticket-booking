@@ -1,5 +1,5 @@
-import BookingSearchBox from "../ui/BookingSearchBox";
-import BookingPromotions from "./BookingPromotions";
+import BookingPromotions from "../BookingPromotions/BookingPromotions";
+import BookingSearchBox from "./components/BookingSearchBox";
 
 export default function BookingHero() {
   return (

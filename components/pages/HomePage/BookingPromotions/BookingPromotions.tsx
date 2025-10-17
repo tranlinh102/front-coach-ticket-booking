@@ -1,4 +1,4 @@
-import PromoCard from "../ui/PromoCard";
+import PromoCard from "./components/PromoCard";
 
 const promotionList = [
     {
