@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CopyIcon, CheckIcon } from "../ui/Icon";
 
 export default function BookingPromotions() {
     const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -68,14 +69,9 @@ export default function BookingPromotions() {
                           <div className="px-3 py-1 border-2 border-dashed border-white rounded-md text-xs font-semibold tracking-wider">{p.code}</div>
                           <button onClick={() => copyCode(p.code)} aria-label={`Copy ${p.code}`} className="w-8 h-8 rounded-md bg-white/20 flex items-center justify-center">
                             {copiedCode === p.code ? (
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                                <path d="M20 6L9 17l-5-5" />
-                              </svg>
+                              <CheckIcon />
                             ) : (
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                              </svg>
+                              <CopyIcon />
                             )}
                           </button>
                         </div>

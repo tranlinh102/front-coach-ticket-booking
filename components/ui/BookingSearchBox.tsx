@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import { vi } from "date-fns/locale";
 import { useEffect, useRef, useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
+import { FromIcon, SwapIcon, DestIcon, CalendarIcon } from "./Icon";
 
 
 export default function BookingSearchBox() {
@@ -129,12 +130,7 @@ export default function BookingSearchBox() {
         <div className="relative w-full md:w-1/3">
             <div className="flex w-full h-full border-b md:border-b-0">
             <div className="w-[20%] flex items-center justify-center px-4 py-3">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right-from-arc">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M15 12h-12" />
-                <path d="M7 8l-4 4l4 4" />
-                <path d="M12 21a9 9 0 0 0 0 -18" />
-                </svg>
+                <FromIcon />
             </div>
 
 
@@ -175,23 +171,14 @@ export default function BookingSearchBox() {
             onClick={swapPlaces}
             className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 mx-2 z-20"
             >
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-transfer">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M20 10h-16l5.5 -6" />
-                <path d="M4 14h16l-5.5 6" />
-            </svg>
+            <SwapIcon />
             </button>
         </div>
 
         <div className="relative w-full md:w-1/3">
             <div className="flex w-full h-full border-b md:border-b-0 md:border-r">
             <div className="w-[20%] flex items-center justify-center px-4 py-3">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left-from-arc">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M9 12h12" />
-                <path d="M17 16l4 -4l-4 -4" />
-                <path d="M12 3a9 9 0 1 0 0 18" />
-                </svg>
+                <DestIcon />
             </div>
 
 
@@ -227,43 +214,23 @@ export default function BookingSearchBox() {
 
         <div className="w-full md:w-1/3">
             <div className="flex w-full h-full border-b md:border-b-0">
-            {/* Icon */}
-            <div className="w-[20%] flex items-center justify-center px-4 py-3">
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event text-gray-600"
-                >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                <path d="M16 3l0 4" />
-                <path d="M8 3l0 4" />
-                <path d="M4 11l16 0" />
-                <path d="M8 15h2v2h-2z" />
-                </svg>
-            </div>
+                <div className="w-[20%] flex items-center justify-center px-4 py-3">
+                    <CalendarIcon />
+                </div>
 
-            {/* Datepicker */}
-            <div className="w-[80%] flex flex-col justify-center px-3 py-2">
-                <label className="text-gray-600 text-left mb-1">Ngày đi</label>
+                <div className="w-[80%] flex flex-col justify-center px-3 py-2">
+                    <label className="text-gray-600 text-left mb-1">Ngày đi</label>
 
-                <DatePicker
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-                dateFormat="dd/MM/yyyy"
-                locale={vi}
-                placeholderText="Chọn ngày"
-                minDate={new Date()}
-                className="w-full focus:outline-none bg-transparent"
-                />
-            </div>
+                    <DatePicker
+                    selected={selectedDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    dateFormat="dd/MM/yyyy"
+                    locale={vi}
+                    placeholderText="Chọn ngày"
+                    minDate={new Date()}
+                    className="w-full focus:outline-none bg-transparent"
+                    />
+                </div>
             </div>
         </div>
 
