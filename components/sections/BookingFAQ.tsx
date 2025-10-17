@@ -60,30 +60,30 @@ export default function BookingFAQ() {
 
       {/* FAQ List */}
       <div className="space-y-4">
-  {(faqData[activeTab] ?? []).map((faq, index) => (
-          <div
-            key={index}
-            className="border border-gray-200 rounded-xl overflow-hidden shadow-sm"
+      {(faqData[activeTab] ?? []).map((faq, index) => (
+        <div
+          key={index}
+          className="border border-gray-200 rounded-xl overflow-hidden shadow-sm"
+        >
+          <button
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            className="w-full flex justify-between items-center text-left px-6 py-4 font-medium"
           >
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex justify-between items-center text-left px-6 py-4 font-medium"
-            >
-              {faq.question}
-              {openIndex === index ? (
-                <Minus className="w-5 h-5 text-gray-500" />
-              ) : (
-                <Plus className="w-5 h-5 text-gray-500" />
-              )}
-            </button>
-
-            {openIndex === index && (
-              <div className="px-6 py-4 text-gray-600 border-t">
-                {faq.answer}
-              </div>
+            {faq.question}
+            {openIndex === index ? (
+              <Minus className="w-5 h-5 text-gray-500" />
+            ) : (
+              <Plus className="w-5 h-5 text-gray-500" />
             )}
-          </div>
-        ))}
+          </button>
+
+          {openIndex === index && (
+            <div className="px-6 py-4 text-gray-600 border-t">
+              {faq.answer}
+            </div>
+          )}
+        </div>
+      ))}
       </div>
     </section>
   );
