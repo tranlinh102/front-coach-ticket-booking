@@ -22,9 +22,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Cột 3: Vé RedBus */}
+        {/* Cột 3: Vé LongDistanceBuses */}
         <div>
-          <h3 className="font-semibold mb-3">Về RedBus</h3>
+          <h3 className="font-semibold mb-3">Về LongDistanceBuses</h3>
           <ul className="space-y-2">
             <li><a href="#" className="hover:underline">Về chúng tôi</a></li>
             <li><a href="#" className="hover:underline">Liên hệ</a></li>
@@ -44,13 +44,13 @@ export default function Footer() {
       <div className="border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
           <div className="flex items-center gap-3">
-            <img src="/favicon.svg" alt="RedBus logo" className="h-20" />
-            <p>© 2025 Redbus Vietnam All Rights Reserved</p>
+            <img src="/favicon.svg" alt="LongDistanceBuses logo" className="h-20" />
+            <p>© 2025 LongDistanceBuses Vietnam All Rights Reserved</p>
           </div>
 
           <div className="text-gray-400 leading-relaxed text-xs md:text-sm max-w-2xl">
-            <p>Công ty TNHH Redbus Việt Nam</p>
-            <p>Email: contact@redbus.vn | Liên hệ: 1900989901</p>
+            <p>Công ty TNHH LongDistanceBuses Việt Nam</p>
+            <p>Email: contact@LongDistanceBuses.vn | Liên hệ: 19001900</p>
             <p>
               Địa chỉ văn phòng: Tầng 6 và 7, Tòa nhà Mê Linh Point, Số 2 Ngô Đức Kế, Phường Bến Nghé,
               Quận 1, Thành phố Hồ Chí Minh

@@ -7,7 +7,7 @@ export default function BookingPromo() {
           ĐẶT VÉ XE KHÁCH RẺ NHẤT!
         </h2>
         <p className="text-gray-600 max-w-lg">
-          LongBuses là nền tảng đặt vé xe khách trực tuyến lớn nhất Việt Nam, được hàng triệu khách hàng tin dùng.
+          LongDistanceBuses là nền tảng đặt vé xe khách trực tuyến lớn nhất Việt Nam, được hàng triệu khách hàng tin dùng.
         </p>
 
         <ul className="space-y-4">

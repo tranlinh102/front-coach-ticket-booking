@@ -5,14 +5,8 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import Header from "@/components/ui/Header/Header";
+// import FloatingButtons from "@/components/ui/FloatingButtons";
 import Footer from "@/components/ui/Footer";
-import FloatingButtons from "@/components/ui/FloatingButtons";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter", 
-});
 
 export const metadata: Metadata = {
   title: "Đặt vé xe khách và xe Limousine",
@@ -21,6 +15,13 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
 };
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter", 
+});
+
 
 export default function RootLayout({
   children,
@@ -32,7 +33,7 @@ export default function RootLayout({
       <body className="bg-gray-50 text-gray-900">
         <Header />
         <main className="container mx-auto pt-24">{children}</main>
-        <FloatingButtons />
+        {/* <FloatingButtons /> */}
         <Footer />
       </body>
     </html>

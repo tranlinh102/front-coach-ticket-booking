@@ -8,7 +8,7 @@ const faqData = {
     { question: "Làm thế nào để đặt vé xe trực tuyến tại Việt Nam?", answer: "Bạn có thể truy cập trang chủ, chọn điểm đi - điểm đến và thanh toán an toàn qua thẻ hoặc ví điện tử." },
     { question: "Các tuyến xe phổ biến ở Việt Nam là gì?", answer: "Các tuyến phổ biến gồm Hà Nội - Sapa, TP.HCM - Đà Lạt, Đà Nẵng - Huế, và nhiều tuyến khác." },
     { question: "Bạn nên ghé thăm những địa điểm du lịch nào ở Việt Nam?", answer: "Một số điểm nổi bật gồm Hội An, Hạ Long, Phú Quốc, Đà Lạt, và Ninh Bình." },
-    { question: "Có dịch vụ xe khách kết nối các thành phố lớn và điểm du lịch không?", answer: "Có, redBus cung cấp mạng lưới xe khách liên tỉnh phủ rộng toàn quốc." },
+    { question: "Có dịch vụ xe khách kết nối các thành phố lớn và điểm du lịch không?", answer: "Có, LongDistanceBuses cung cấp mạng lưới xe khách liên tỉnh phủ rộng toàn quốc." },
     { question: "Giá vé xe khách thông thường ở Việt Nam là bao nhiêu?", answer: "Giá dao động từ 100.000đ đến 500.000đ tùy tuyến và loại xe." },
   ],
   "Đặt chỗ": [
