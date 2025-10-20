@@ -35,3 +35,10 @@ body {
   width: 0;
 }
 
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100%;
+  display: block;
+}
+
+
