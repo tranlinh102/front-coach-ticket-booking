@@ -190,7 +190,7 @@ export default function SearchTicketForm() {
         <div className="mt-6 text-center">
           <button
             type="submit"
-            className="rounded-2xl bg-[var(--brand)] px-8 py-2 text-white hover:bg-[var(--brand-dark)] font-bold transition"
+            className="cursor-pointer rounded-2xl bg-[var(--brand)] px-8 py-2 text-white hover:bg-[var(--brand-dark)] font-bold transition"
           >
             Tìm chuyến xe
           </button>

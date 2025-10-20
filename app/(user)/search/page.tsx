@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 import SearchFilter from "@/components/pages/TicketSearch/SearchFilter/SearchFilter";
 import SearchTicketForm from "@/components/pages/TicketSearch/SearchTicketForm";
-import TripCard from "@/components/pages/TicketSearch/TripCard";
+import TripCard from "@/components/pages/TicketSearch/SearchResults/TripCard";
 
 const trips = [
     {
@@ -39,6 +43,12 @@ const trips = [
   ];
 
 export default function SearchPage() {
+  const [openTripId, setOpenTripId] = useState<number | null>(null);
+
+  const handleOpenTrip = (id: number) => {
+    setOpenTripId(id);
+  };
+
   return (
     <div className="space-y-12">
       <SearchTicketForm />
@@ -57,7 +67,12 @@ export default function SearchPage() {
 
           <div className="flex flex-col gap-4">
             {trips.map((trip) => (
-              <TripCard key={trip.id} {...trip} />
+              <TripCard 
+              key={trip.id} 
+              {...trip} 
+              isOpen={openTripId === trip.id}
+              onClick={() => handleOpenTrip(trip.id)}
+              />
             ))}
           </div>
         </div>

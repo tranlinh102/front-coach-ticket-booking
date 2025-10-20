@@ -7,6 +7,8 @@
 body {
   --brand: #7FD858;
   --brand-dark: #5EA53F;
+  --brand-light: rgba(127, 216, 88, 0.2); 
+
   font-family: var(--font-inter);
 }
 
