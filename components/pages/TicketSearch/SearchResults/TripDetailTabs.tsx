@@ -129,7 +129,7 @@ export default function TripDetailTabs(
             {tab.label}
           </button>
         ))}
-        <button className="cursor-pointer ml-auto bg-[var(--brand-light)] text-[var(--brand-dark)] px-4 py-2 rounded-full m-2 hover:bg-[var(--brand-dark)] hover:text-white transition">
+        <button className="cursor-pointer ml-auto bg-[var(--brand-light)] text-[var(--brand-dark)] px-4 py-2 rounded-full m-2 hover:bg-[var(--brand-dark)] hover:text-white transition font-semibold">
           Chọn chuyến
         </button>
       </div>
