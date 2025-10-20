@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 import SearchFilter from "@/components/features/TicketSearch/SearchFilter/SearchFilter";
-import SearchTicketForm from "@/components/features/TicketSearch/SearchTicketForm";
 import TripCard from "@/components/features/TicketSearch/SearchResults/TripCard";
+import SearchTicketForm from "@/components/features/TicketSearch/SearchForm/SearchTicketForm";
 
 const trips = [
     {
