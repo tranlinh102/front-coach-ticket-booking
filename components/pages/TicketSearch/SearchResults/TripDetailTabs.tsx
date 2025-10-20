@@ -175,7 +175,7 @@ export default function TripDetailTabs(
                                   key={seat.id}
                                   onClick={() => handleSelectSeat(seat.id, seat.status)}
                                   disabled={isDisabled}
-                                  className={`w-12 h-8 text-xs rounded border flex items-center justify-center font-medium transition-colors ${seatClass}`}
+                                  className={`cursor-pointer w-12 h-8 text-xs rounded border flex items-center justify-center font-medium transition-colors ${seatClass}`}
                                 >
                                   {seat.id}
                                 </button>
@@ -209,7 +209,7 @@ export default function TripDetailTabs(
                                   key={seat.id}
                                   onClick={() => handleSelectSeat(seat.id, seat.status)}
                                   disabled={isDisabled}
-                                  className={`w-12 h-8 text-xs rounded border flex items-center justify-center font-medium transition-colors ${seatClass}`}
+                                  className={`cursor-pointer w-12 h-8 text-xs rounded border flex items-center justify-center font-medium transition-colors ${seatClass}`}
                                 >
                                   {seat.id}
                                 </button>
