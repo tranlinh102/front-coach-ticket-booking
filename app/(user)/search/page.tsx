@@ -40,6 +40,50 @@ const trips = [
       available: 33,
       price: "290.000đ",
     },
+    {
+      id: 4,
+      startTime: "00:35",
+      endTime: "08:35",
+      from: "BX Miền Đông Mới",
+      to: "Bến Xe Đà Lạt",
+      duration: "8 giờ",
+      type: "Limousine",
+      available: 33,
+      price: "290.000đ",
+    },
+    {
+      id: 5,
+      startTime: "00:35",
+      endTime: "08:35",
+      from: "BX Miền Đông Mới",
+      to: "Bến Xe Đà Lạt",
+      duration: "8 giờ",
+      type: "Limousine",
+      available: 33,
+      price: "290.000đ",
+    },
+    {
+      id: 6,
+      startTime: "00:35",
+      endTime: "08:35",
+      from: "BX Miền Đông Mới",
+      to: "Bến Xe Đà Lạt",
+      duration: "8 giờ",
+      type: "Limousine",
+      available: 33,
+      price: "290.000đ",
+    },
+    {
+      id: 7,
+      startTime: "00:35",
+      endTime: "08:35",
+      from: "BX Miền Đông Mới",
+      to: "Bến Xe Đà Lạt",
+      duration: "8 giờ",
+      type: "Limousine",
+      available: 33,
+      price: "290.000đ",
+    },
   ];
 
 export default function SearchPage() {
@@ -53,7 +97,7 @@ export default function SearchPage() {
     <div className="space-y-12">
       <SearchTicketForm />
 
-      <div className="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-[350px_1fr] gap-6">
+      <div className="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-[350px_1fr] gap-6 items-start">
         {/* Bộ lọc */}
         <SearchFilter />
 

@@ -62,90 +62,92 @@ export default function SearchFilter() {
   };
 
   return (
-    <aside className="bg-white rounded-xl card-box-shadown p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="font-semibold text-gray-800">BỘ LỌC TÌM KIẾM</h3>
-        <button
-          onClick={handleClearFilters} 
-          className={`cursor-pointer text-[var(--brand)] text-sm font-bold flex items-center gap-1`}
-        >
-          Bỏ lọc
-          <TrashIcon />
-        </button>
-      </div>
-
-      <div className="space-y-4 text-sm">
-        <div>
-          <h4 className="font-medium mb-2 text-gray-800">Giờ đi</h4>
-          <div className="space-y-1">
-            {timeOptions.map((label, i) => (
-              <SortItem 
-              key={i}
-              label={label} 
-              isSelected={selectedTimes.includes(label)} 
-              onChange={() => handleTimeChange(label)} 
-              />
-            ))}
-          </div>
+    <div className="sticky top-4 self-start">
+      <aside className="bg-white rounded-xl card-box-shadown p-4">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="font-semibold text-gray-800">BỘ LỌC TÌM KIẾM</h3>
+          <button
+            onClick={handleClearFilters} 
+            className={`cursor-pointer text-[var(--brand)] text-sm font-bold flex items-center gap-1`}
+          >
+            Bỏ lọc
+            <TrashIcon />
+          </button>
         </div>
 
-        <hr />
-
-        <div>
-          <h4 className="font-medium mb-2 text-gray-800">Loại xe</h4>
-          <div className="flex flex-wrap gap-2">
-            {carTypes.map((type) => {
-              const isSelected = selectedCarTypes.includes(type);
-              return (
-                <SortButton
-                  key={type}
-                  onClick={() => handleCarTypeChange(type)}
-                  text={type}
-                  isSelected={isSelected}
+        <div className="space-y-4 text-sm">
+          <div>
+            <h4 className="font-medium mb-2 text-gray-800">Giờ đi</h4>
+            <div className="space-y-1">
+              {timeOptions.map((label, i) => (
+                <SortItem 
+                key={i}
+                label={label} 
+                isSelected={selectedTimes.includes(label)} 
+                onChange={() => handleTimeChange(label)} 
                 />
-              );
-            })}
+              ))}
+            </div>
+          </div>
+
+          <hr />
+
+          <div>
+            <h4 className="font-medium mb-2 text-gray-800">Loại xe</h4>
+            <div className="flex flex-wrap gap-2">
+              {carTypes.map((type) => {
+                const isSelected = selectedCarTypes.includes(type);
+                return (
+                  <SortButton
+                    key={type}
+                    onClick={() => handleCarTypeChange(type)}
+                    text={type}
+                    isSelected={isSelected}
+                  />
+                );
+              })}
+            </div>
+          </div>
+
+          <hr />
+
+          <div>
+            <h4 className="font-medium mb-2 text-gray-800">Hàng ghế</h4>
+            <div className="flex flex-wrap gap-2">
+              {seatRows.map((r) => {
+                const isSelected = selectedSeatRows.includes(r);
+                return (
+                  <SortButton
+                    key={r}
+                    onClick={() => handleSeatRowChange(r)}
+                    text={r}
+                    isSelected={isSelected}
+                  />
+                );
+              })}
+            </div>
+          </div>
+
+          <hr />
+
+          <div>
+            <h4 className="font-medium mb-2 text-gray-800">Tầng</h4>
+            <div className="flex gap-2">
+              {floors.map((floor) => {
+                const isSelected = selectedFloors.includes(floor);
+                return (
+                  <SortButton
+                    key={floor}
+                    onClick={() => handleFloorChange(floor)}
+                    text={floor}
+                    isSelected={isSelected}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
-
-        <hr />
-
-        <div>
-          <h4 className="font-medium mb-2 text-gray-800">Hàng ghế</h4>
-          <div className="flex flex-wrap gap-2">
-            {seatRows.map((r) => {
-              const isSelected = selectedSeatRows.includes(r);
-              return (
-                <SortButton
-                  key={r}
-                  onClick={() => handleSeatRowChange(r)}
-                  text={r}
-                  isSelected={isSelected}
-                />
-              );
-            })}
-          </div>
-        </div>
-
-        <hr />
-
-        <div>
-          <h4 className="font-medium mb-2 text-gray-800">Tầng</h4>
-          <div className="flex gap-2">
-            {floors.map((floor) => {
-              const isSelected = selectedFloors.includes(floor);
-              return (
-                <SortButton
-                  key={floor}
-                  onClick={() => handleFloorChange(floor)}
-                  text={floor}
-                  isSelected={isSelected}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </aside>
+      </aside>
+    </div>
   );
 }
