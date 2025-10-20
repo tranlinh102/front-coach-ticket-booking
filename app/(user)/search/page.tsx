@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
-import SearchFilter from "@/components/pages/TicketSearch/SearchFilter/SearchFilter";
-import SearchTicketForm from "@/components/pages/TicketSearch/SearchTicketForm";
-import TripCard from "@/components/pages/TicketSearch/SearchResults/TripCard";
+import SearchFilter from "@/components/features/TicketSearch/SearchFilter/SearchFilter";
+import SearchTicketForm from "@/components/features/TicketSearch/SearchTicketForm";
+import TripCard from "@/components/features/TicketSearch/SearchResults/TripCard";
 
 const trips = [
     {
