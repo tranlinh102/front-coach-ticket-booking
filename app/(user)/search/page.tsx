@@ -1,4 +1,4 @@
-import SearchFilter from "@/components/pages/TicketSearch/SearchFilter";
+import SearchFilter from "@/components/pages/TicketSearch/SearchFilter/SearchFilter";
 import SearchTicketForm from "@/components/pages/TicketSearch/SearchTicketForm";
 import TripCard from "@/components/pages/TicketSearch/TripCard";
 
@@ -43,7 +43,7 @@ export default function SearchPage() {
     <div className="space-y-12">
       <SearchTicketForm />
 
-      <div className="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
+      <div className="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-[350px_1fr] gap-6">
         {/* Bộ lọc */}
         <SearchFilter />
 
