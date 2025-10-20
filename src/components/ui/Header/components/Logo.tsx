@@ -1,11 +1,10 @@
 import Image from "next/image";
-import LogoSvg from "@/public/assets/logo.svg";
 
 const Logo = () => {
   return (
     <div className="flex items-center">
       <Image
-        src={LogoSvg}
+        src="/assets/logo.svg"
         alt="Logo"
         width={96}
         height={96}
