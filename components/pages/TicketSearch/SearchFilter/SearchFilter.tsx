@@ -16,13 +16,10 @@ const seatRows = ["Hàng đầu", "Hàng giữa", "Hàng cuối"];
 const floors = ["Tầng trên", "Tầng dưới"];
 
 export default function SearchFilter() {
-  const [selectedTimes, setSelectedTimes] = useState<string[]>([
-    "Sáng sớm 00:00 - 06:00 (13)",
-  ]);
-  
-  const [selectedCarTypes, setSelectedCarTypes] = useState<string[]>(["Ghế"]);
-  const [selectedSeatRows, setSelectedSeatRows] = useState<string[]>(["Hàng đầu"]);
-  const [selectedFloors, setSelectedFloors] = useState<string[]>(["Tầng trên"]);
+  const [selectedTimes, setSelectedTimes] = useState<string[]>([""]);
+  const [selectedCarTypes, setSelectedCarTypes] = useState<string[]>([""]);
+  const [selectedSeatRows, setSelectedSeatRows] = useState<string[]>([""]);
+  const [selectedFloors, setSelectedFloors] = useState<string[]>([""]);
 
   const handleTimeChange = (label: string) => {
     setSelectedTimes((prev) =>

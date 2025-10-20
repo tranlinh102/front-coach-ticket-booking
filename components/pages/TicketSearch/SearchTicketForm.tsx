@@ -6,6 +6,7 @@ import { vi } from "date-fns/locale";
 
 import "react-datepicker/dist/react-datepicker.css";
 import LocationPicker from "./LocationPicker";
+import { SwapIcon } from "@/components/ui/Icon";
 
 // import { formatDate } from "@/libs/date";
 
@@ -19,7 +20,6 @@ export default function SearchTicketForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     
     // const formattedDepartureDate = departureDate ? formatDate(departureDate) : "";
     // alert(`${formattedDepartureDate}`);
@@ -42,9 +42,9 @@ export default function SearchTicketForm() {
         onSubmit={handleSubmit}
         className="rounded-2xl border border-[var(--brand)] bg-white p-6 shadow-sm"
         style={{ outline: "8px solid rgba(127,216,88,.1)" }}
+        noValidate
       >
-
-        <div className="mb-4 flex items-center gap-6">
+        {/* <div className="mb-4 flex items-center gap-6">
           <label className="flex cursor-pointer items-center space-x-2">
             <input
               type="radio"
@@ -95,7 +95,7 @@ export default function SearchTicketForm() {
           >
             Hướng dẫn mua vé
           </a>
-        </div>
+        </div> */}
 
         <div
           className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${
@@ -117,20 +117,7 @@ export default function SearchTicketForm() {
                 "
                 aria-label="Đảo ngược điểm đi và điểm đến"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5 text-gray-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
-                  />
-                </svg>
+                <SwapIcon />
               </button>
             </div>
 
@@ -173,18 +160,16 @@ export default function SearchTicketForm() {
             <label className="mb-1 block text-sm font-medium text-gray-700">
               Số vé
             </label>
-            <select
+            <input
+              type="number"
+              min={1}                    
               value={tickets}
               onChange={(e) => setTickets(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 p-2"
-            >
-              {[1, 2, 3, 4, 5].map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
+              className="w-full rounded-lg border border-gray-300 p-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              placeholder="Nhập số vé"
+            />
           </div>
+
         </div>
 
         <div className="mt-6 text-center">
