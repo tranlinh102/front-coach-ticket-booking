@@ -14,11 +14,11 @@ interface Trip {
 }
 
 interface TripStore {
-  trips: Trip[];
-  setTrips: (trips: Trip[]) => void;
+  selectedTrip: Trip | null;
+  setSelectedTrip: (trip: Trip) => void;
 }
 
 export const useTripStore = create<TripStore>((set) => ({
-  trips: [],
-  setTrips: (trips) => set({ trips }),
+  selectedTrip: null,
+  setSelectedTrip: (trip) => set({ selectedTrip: trip }),
 }));

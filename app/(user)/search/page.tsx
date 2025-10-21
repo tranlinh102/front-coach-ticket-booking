@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTripStore } from "@/store/tripStore";
 import { useRouter } from "next/navigation";
 
@@ -90,7 +90,7 @@ const trips = [
 
 export default function SearchPage() {
   const router = useRouter();
-  const { setTrips } = useTripStore();
+  const { setSelectedTrip } = useTripStore();
 
   const [openTripId, setOpenTripId] = useState<number | null>(null);
 
@@ -99,12 +99,9 @@ export default function SearchPage() {
   };
 
   const handleViewDetail = (trip: any) => {
+    setSelectedTrip(trip);
     router.push(`/trip/${trip.id}`);
   };
-
-  useEffect(() => {
-    setTrips(trips);
-  }, []);
 
   return (
     <div className="space-y-12">
