@@ -11,6 +11,7 @@ interface Seat {
 interface TripDetailTabsProps {
   isOpen: boolean;
   onClick: () => void;
+  onViewDetail: () => void;
 }
 
 const lowerCol1: Seat[] = [
@@ -85,6 +86,7 @@ export default function TripDetailTabs(
   {
   isOpen,
   onClick,
+  onViewDetail,
   }: TripDetailTabsProps
 ) {
   const [activeTab, setActiveTab] = useState("");
@@ -129,7 +131,7 @@ export default function TripDetailTabs(
             {tab.label}
           </button>
         ))}
-        <button className="cursor-pointer ml-auto bg-[var(--brand-light)] text-[var(--brand-dark)] px-4 py-2 rounded-full m-2 hover:bg-[var(--brand-dark)] hover:text-white transition font-semibold">
+        <button onClick={onViewDetail} className="cursor-pointer ml-auto bg-[var(--brand-light)] text-[var(--brand-dark)] px-4 py-2 rounded-full m-2 hover:bg-[var(--brand-dark)] hover:text-white transition font-semibold">
           Chọn chuyến
         </button>
       </div>
@@ -239,6 +241,7 @@ export default function TripDetailTabs(
                       <button 
                         className="bg-[var(--brand)] text-white font-bold px-6 py-3 rounded-lg hover:bg-[var(--brand-dark)] transition"
                         disabled={selectedSeats.length === 0}
+                        onClick={onViewDetail}
                       >
                         Chọn
                       </button>

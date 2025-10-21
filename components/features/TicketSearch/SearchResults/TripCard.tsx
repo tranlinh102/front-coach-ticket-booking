@@ -12,6 +12,7 @@ interface TripCardProps {
   price: string;
   isOpen: boolean;
   onClick: () => void;
+  onViewDetail: () => void;
 }
 
 export default function TripCard(
@@ -26,6 +27,7 @@ export default function TripCard(
   price,
   isOpen,
   onClick,
+  onViewDetail,
   }: TripCardProps) {
   return (
     <div className="bg-white card-box-shadown rounded-xl shadow-sm p-4 flex flex-col gap-3 transition-all">
@@ -73,7 +75,7 @@ export default function TripCard(
       </div>
 
       <div className="flex gap-4 text-gray-500 text-sm border-t pt-3">
-        <TripDetailTabs onClick={onClick} isOpen={isOpen} />
+        <TripDetailTabs onClick={onClick} isOpen={isOpen} onViewDetail={onViewDetail} />
       </div>
     </div>
   );

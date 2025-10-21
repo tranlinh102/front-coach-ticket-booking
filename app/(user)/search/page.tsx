@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTripStore } from "@/store/tripStore";
+import { useRouter } from "next/navigation";
 
 import SearchFilter from "@/components/features/TicketSearch/SearchFilter/SearchFilter";
 import TripCard from "@/components/features/TicketSearch/SearchResults/TripCard";
@@ -87,11 +89,22 @@ const trips = [
   ];
 
 export default function SearchPage() {
+  const router = useRouter();
+  const { setTrips } = useTripStore();
+
   const [openTripId, setOpenTripId] = useState<number | null>(null);
 
   const handleOpenTrip = (id: number) => {
     setOpenTripId(id);
   };
+
+  const handleViewDetail = (trip: any) => {
+    router.push(`/trip/${trip.id}`);
+  };
+
+  useEffect(() => {
+    setTrips(trips);
+  }, []);
 
   return (
     <div className="space-y-12">
@@ -116,6 +129,7 @@ export default function SearchPage() {
               {...trip} 
               isOpen={openTripId === trip.id}
               onClick={() => handleOpenTrip(trip.id)}
+              onViewDetail={() => handleViewDetail(trip)}
               />
             ))}
           </div>
