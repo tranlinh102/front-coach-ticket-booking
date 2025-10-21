@@ -28,29 +28,20 @@ export default function TripDetailPage() {
   // if (!trip) return <p>Đang tải...</p>;
 
   return (
-    // div ngoài cùng dùng để tạo khoảng cách giữa các KHỐI lớn
-    <div className="space-y-12 p-4 md:p-8">
-      
-      {/* KHỐI 1: Chọn điểm đón (Full-width) */}
+    <div className="space-y-12">
+      <div className="max-w-7xl mx-auto px-6 py-10 items-center">
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex-1 space-y-8">
+            <PickupDropoff />
+            <SeatSelector />
+            <CustomerInfo />
+          </div>
 
-      {/* KHỐI 2: Layout 2 cột (flex) */}
-      <div className="flex flex-col lg:flex-row gap-8">
-        
-        {/* Cột trái (co giãn) */}
-        <div className="flex-1 space-y-8">
-          <PickupDropoff />
-          <SeatSelector />
-          <CustomerInfo />
+          <div className="w-full lg:w-96">
+            <TripSummary />
+          </div>
         </div>
-
-        {/* Cột phải (cố định chiều rộng trên desktop) */}
-        <div className="w-full lg:w-96">
-          <TripSummary />
-        </div>
-
       </div>
-
-      {/* Bạn có thể thêm các khối full-width khác ở đây */}
     </div>
   );
 }
