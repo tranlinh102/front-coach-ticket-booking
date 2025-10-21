@@ -34,8 +34,7 @@ const TripSummary: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-sm flex flex-col gap-6">
-      
+    <div className="w-full max-w-sm flex flex-col gap-6 sticky top-4 self-start">
       {/* CARD: THÔNG TIN LƯỢT ĐI */}
       <div className="bg-white border border-gray-200 rounded-lg shadow-md p-5">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">
