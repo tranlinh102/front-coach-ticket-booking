@@ -1,0 +1,12 @@
+/* Yêu cầu 4: File CSS Module
+  Tên class (ví dụ: .listTitle) sẽ được biên dịch thành một tên duy nhất
+  để đảm bảo style không bị xung đột.
+*/
+
+.listTitle {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  color: #2563EB; /* Tương đương text-blue-600 */
+  padding-bottom: 8px;
+  border-bottom: 2px solid #DBEAFE; /* Tương đương border-blue-100 */
+}

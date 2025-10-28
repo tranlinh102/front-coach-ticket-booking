@@ -22,7 +22,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <html lang="vi" className={inter.variable}>
       <body className="bg-gray-50 text-gray-900">
-        <main className="container mx-auto pt-24">{children}</main>
+        <main className="container mx-auto">{children}</main>
       </body>
     </html>
   );
