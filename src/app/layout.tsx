@@ -4,14 +4,6 @@ import "@/styles/globals.css";
 
 import { Inter } from "next/font/google";
 
-export const metadata: Metadata = {
-  title: "Admin Dashboard - Đặt vé xe khách và xe Limousine",
-  description: "",
-  icons: {
-    icon: "/favicon.svg",
-  },
-};
-
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

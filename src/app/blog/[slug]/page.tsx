@@ -1,4 +1,5 @@
 // import Link from 'next/link';
+import type { Metadata } from 'next';
 
 // Định nghĩa kiểu dữ liệu cho props, bao gồm 'params'
 type BlogPostPageProps = {
@@ -6,6 +7,21 @@ type BlogPostPageProps = {
     slug: string; // 'slug' phải trùng tên với thư mục động [slug]
   };
 };
+
+// 1. Hàm generateMetadata cho phép tạo metadata động
+export async function generateMetadata(
+  { params }: BlogPostPageProps
+): Promise<Metadata> {
+  // 2. Giả lập lấy thông tin bài viết dựa trên slug
+  const postTitle = `Bài viết: ${params.slug}`;
+  const postDescription = `Nội dung chi tiết của bài viết ${params.slug}`;
+
+  // 3. Trả về đối tượng metadata động
+  return {
+    title: postTitle,
+    description: postDescription,
+  };
+}
 
 /**
  * Yêu cầu 2: Route động /blog/[slug]
