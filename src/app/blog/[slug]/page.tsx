@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 // Định nghĩa kiểu dữ liệu cho props, bao gồm 'params'
 type BlogPostPageProps = {
@@ -23,17 +23,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       </h1>
       
       <p className="text-gray-700 mb-6">
-        Đây là nội dung chi tiết cho bài viết <code className="bg-gray-100 p-1 rounded text-sm">{slug}</code>.
         Trong một ứng dụng thực tế, bạn sẽ dùng 'slug' này để query database
         và lấy nội dung bài viết tương ứng.
       </p>
 
-      <Link 
+      {/* <Link 
         href="/blog" 
         className="inline-block text-blue-600 hover:underline"
       >
         &larr; Quay lại danh sách blog
-      </Link>
+      </Link> */}
     </div>
   );
 }

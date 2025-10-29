@@ -17,7 +17,7 @@ export default function BlogLayout({
       */}
       <header className="mb-8 pb-4 border-b-2 border-gray-200">
         <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">
-          Trang Blog Cá Nhân
+          Trang blog cá nhân
         </h1>
       </header>
 
