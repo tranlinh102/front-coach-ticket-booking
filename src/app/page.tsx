@@ -1,4 +1,4 @@
-import Counter from "@/components/ui/Counter";
+import Counter from "@/components/Counter";
 
 export default function HomePage() {
   return (
@@ -8,7 +8,7 @@ export default function HomePage() {
           Mini-Project: Client Components & Hooks
         </h1>
         <p className="text-lg text-gray-600">
-          Đây là Server Component (<code>app/page.tsx</code>) đang render một Client Component.
+          Đây là Server Component đang render một Client Component.
         </p>
       </div>
       
