@@ -1,19 +1,14 @@
-import type { Metadata } from "next";
+import SideNav from '@/components/ui/dashboard/sidenav';
 
-export const metadata: Metadata = {
-  title: "Admin Dashboard - Đặt vé xe khách và xe Limousine",
-  description: "",
-  icons: {
-    icon: "/favicon.svg",
-  },
-};
-
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+export const experimental_cache = 'force-cache';
+ 
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="container mx-auto py-8">
-        {children}
+    <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
+      <div className="w-full flex-none md:w-64">
+        <SideNav />
       </div>
+      <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
     </div>
   );
 }
